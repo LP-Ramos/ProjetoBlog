@@ -1,8 +1,7 @@
 # ProjetoBlog
 Um projeto de Blog que estou fazendo como exercício usando Python e Django.
 
-Esse é um protótipo para estudos, sem fins lucrativos.
-Todo material utilizado pertence ao Tecmundo:
+Esse é um protótipo para estudos, sem fins lucrativos. Todo material utilizado pertence ao Tecmundo: <p>
 https://www.tecmundo.com.br/internet/235841-10-noticias-tecnologia-voce-comecar-dia-23-03.htm
 
 <a href="https://ibb.co/6DRLxZy"><img src="https://i.ibb.co/RQpdmSg/Captura-de-tela-de-2022-03-24-17-20-12.png" alt="Captura-de-tela-de-2022-03-24-17-20-12" border="0"></a>
