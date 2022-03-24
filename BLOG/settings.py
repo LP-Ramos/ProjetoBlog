@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0@*_is7o6p39z+nyy&(n2$+ohk15d&ss1-yse&39_yb7-nd-^v'
+SECRET_KEY = ''  # imported from "local_settings.py"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # imported from "local_settings.py"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []  # imported from "local_settings.py"
 
 
 # Application definition
@@ -76,14 +76,14 @@ WSGI_APPLICATION = 'BLOG.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+DATABASES = {  # imported from "local_settings.py"
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog_django',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'leandro',
-        'PASSWORD': '250893',
+        'ENGINE': '',
+        'NAME': '',
+        'HOST': '',
+        'PORT': '',
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 
@@ -142,3 +142,9 @@ MESSAGE_TAGS = {
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# importing 'SECRET_KEY', 'DEBUG = True', 'ALLOWED_HOSTS' and 'DATABASES'
+try:
+    from .local_settings import * 
+except ImportError:
+    pass
