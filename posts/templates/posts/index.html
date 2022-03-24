@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {%load humanize%}
+{%load filtros%}
 
 {% block 'conteudo' %}
         <div class="card-columns mt-4">
@@ -23,20 +24,8 @@
                     <p class="card-text">{{post.excerto_post}}</p>
                     <p class="card-text">
                         <small class="text-muted">
-                            {{post.data_post|naturalday|title}}
-                            |
-
-                            {%if post.numero_comentarios < 1%}nenhum comentário
-
-                            {%elif post.numero_comentarios > 1%}
-                            {{post.numero_comentarios}} comentários
-                            
-                            {%else%}
-                            {{post.numero_comentarios}} comentário
-
-                            {%endif%}
-                            |
-                            
+                            {{post.data_post|naturalday|title}} |
+                            {{post.numero_comentarios|plural_comentarios}} |                            
                             {{post.categoria_post}}</small>
                     </p>
 
