@@ -18,3 +18,4 @@ def comentarios(num_comentarios):
 
     except:
         return f'{num_comentarios} comentário(s)'
+        
