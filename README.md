@@ -1,6 +1,8 @@
 # ProjetoBlog
 Um projeto de Blog que estou fazendo como exercício usando Python e Django.
 
+Site do Blog: http://35.247.246.172/
+
 Esse é um protótipo para estudos, sem fins lucrativos. Todo material utilizado pertence ao Tecmundo: <p>
 https://www.tecmundo.com.br/internet/235841-10-noticias-tecnologia-voce-comecar-dia-23-03.htm
 
