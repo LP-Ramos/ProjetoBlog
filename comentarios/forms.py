@@ -1,8 +1,9 @@
 from urllib import request
 from webbrowser import get
 from django.forms import ModelForm
-from .models import Comentario
 import requests
+from .models import Comentario
+from .local_forms import *
 
 
 class FormComentario(ModelForm):
@@ -12,13 +13,13 @@ class FormComentario(ModelForm):
 
         recaptcha_request = requests.post(
             'https://www.google.com/recaptcha/api/siteverify',
-            data={'secret': '6Lf2tC0fAAAAAK1vbBwmjE41OynhLeF3GmYHP1ph',
+            data={'secret': secret_key,
             'response': recaptcha_response})
 
         recaptcha_result = recaptcha_request.json()
 
         if not recaptcha_result.get('success'):
-            self.add_error('comentario', 'Desculpe-me robô, houve um erro.')            
+            self.add_error('comentario', 'Desculpe-me robô, houve um erro.')
 
         cleaned_data = self.cleaned_data
         nome = cleaned_data.get('nome_comentario')

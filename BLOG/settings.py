@@ -164,6 +164,7 @@ AUTHENTICATION_BACKENDS = [
 
 # importing 'SECRET_KEY', 'DEBUG = True', 'ALLOWED_HOSTS' and 'DATABASES'
 try:
-    from .local_settings import * 
+    from .local_settings import *
+
 except ImportError:
     pass
